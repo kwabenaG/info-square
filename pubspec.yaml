@@ -31,8 +31,8 @@ dependencies:
   flutter_native_splash: ^1.2.0
 
 flutter_native_splash: 
-  color: "#F6F7FA"
-  image: "assets/info-square-splash.png"
+  color: "#E2E9F2"
+  image: "assets/info-square.png"
   android: true
   ios: true
 
