@@ -25,21 +25,21 @@ Widget initDrawer() {
             style: TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Schyler'))),
+                fontFamily: 'Trajan Pro'))),
     ListTile(
         onTap: () {},
         title: Text("Tools",
             style: TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Schyler'))),
+                fontFamily: 'Trajan Pro'))),
     ListTile(
         onTap: () {},
         title: Text("Help",
             style: TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w700,
-                fontFamily: 'Schyler'))),
+                fontFamily: 'Trajan Pro'))),
     Padding(padding: EdgeInsets.only(bottom: 400)),
     Divider(height: 0.0),
     Container(

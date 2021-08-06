@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 
 // local imports
 import 'package:info_square/screens/pages/default_screen.dart';
+import 'package:info_square/widgets/appbar_widget.dart';
 import 'package:info_square/widgets/homepage/card_widget_news.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -65,10 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.grey[400],
                   shape: BoxShape.circle,
                 ),
-                child: IconButton(
-                    icon: Icon(Icons.person, color: Colors.blue[800]),
-                    iconSize: 30.0,
-                    onPressed: () {}))
+                child: personButtonAppBar(context))
           ]), // end of appbar
       body: Container(
           color: Colors.black12,

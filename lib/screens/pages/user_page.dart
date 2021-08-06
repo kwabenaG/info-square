@@ -2,16 +2,16 @@
 
 import 'package:flutter/material.dart';
 
-class userData extends StatefulWidget {
-  const userData({Key? key}) : super(key: key);
+class UserData extends StatefulWidget {
+  const UserData({Key? key}) : super(key: key);
 
   @override
-  _userDataState createState() => _userDataState();
+  _UserDataState createState() => _UserDataState();
 }
 
-class _userDataState extends State<userData> {
+class _UserDataState extends State<UserData> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(appBar: AppBar(title: Text('a')));
   }
 }
