@@ -2,6 +2,10 @@ import "dart:core";
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
+// local imports
+import 'package:info_square/screens/pages/default_screen.dart';
+import 'package:info_square/widgets/homepage/card_widget_news.dart';
+
 class HomeScreen extends StatefulWidget {
   //HomeScreen({  }) : super(key: key);
 
@@ -13,6 +17,18 @@ class _HomeScreenState extends State<HomeScreen> {
   //for selected item
   int _selectedIndex = 0;
 
+  //responsible for drawer selection
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
+  // content classes
+  final List<Widget> content = [
+    DefaultScreen(),
+    Text("two"),
+    Text("three"),
+    Text("user"),
+    Text("user"),
+  ];
+
   void _tapped(int index) {
     setState(() => {_selectedIndex = index});
   }
@@ -20,14 +36,27 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: initDrawer(),
+      drawerScrimColor: Colors.black54,
+      drawerEnableOpenDragGesture: false,
+      drawerEdgeDragWidth: 5.0,
       appBar: AppBar(
-          title: Text("Info Square",
-              style: TextStyle(
-                  fontFamily: "skia",
-                  fontWeight: FontWeight.w600,
-                  color: Colors.blue[800])),
+          //app bar
+          // leading: IconButton(
+          //     visualDensity: VisualDensity.compact,
+          //     icon: Icon(Icons.menu),
+          //     color: Colors.blue[800],
+          //     onPressed: ),
+          iconTheme: IconThemeData(color: Colors.blue[800]),
+          // title: Text("Info Dem",
+          //     style: TextStyle(
+          //         fontFamily: "Raleway",
+          //         fontSize: 25.0,
+          //         fontWeight: FontWeight.w600,
+          //         color: Colors.blue[800])),
           elevation: 0,
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.black12,
           centerTitle: false,
           actions: [
             Container(
@@ -37,11 +66,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
-                    icon: Icon(Icons.search, color: Colors.blue[800]),
-                    iconSize: 25.0,
+                    icon: Icon(Icons.person, color: Colors.blue[800]),
+                    iconSize: 30.0,
                     onPressed: () {}))
-          ]),
-      body: Center(),
+          ]), // end of appbar
+      body: Container(
+          color: Colors.black12,
+          // margin: EdgeInsets.symmetric(vertical: 20.0),
+          // height: 190,
+          child: content[_selectedIndex]), //body starts here
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -57,8 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
             label: "Alerts",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "User",
+            icon: Icon(Icons.search),
+            label: "Search",
           ),
         ],
         currentIndex: _selectedIndex,
@@ -66,7 +99,12 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: Colors.black,
         showUnselectedLabels: true,
         onTap: _tapped,
+        backgroundColor: Colors.blue[800],
       ),
     );
   }
 }
+
+// Widget drawerM(){
+//   return
+// }
