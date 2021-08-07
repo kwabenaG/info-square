@@ -3,7 +3,8 @@ import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
 
 // local imports
-import 'package:info_square/screens/pages/default_screen.dart';
+import 'package:info_square/screens/pages/default_page.dart';
+import 'package:info_square/screens/pages/search_page.dart';
 import 'package:info_square/widgets/appbar_widget.dart';
 import 'package:info_square/widgets/homepage/card_widget_news.dart';
 
@@ -26,8 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     DefaultScreen(),
     Text("two"),
     Text("three"),
-    Text("user"),
-    Text("user"),
+    SearchPage()
   ];
 
   void _tapped(int index) {
@@ -70,8 +70,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ]), // end of appbar
       body: Container(
           color: Colors.black12,
-          // margin: EdgeInsets.symmetric(vertical: 20.0),
-          // height: 190,
           child: content[_selectedIndex]), //body starts here
       bottomNavigationBar: BottomNavigationBar(
         items: [

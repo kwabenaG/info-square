@@ -12,6 +12,11 @@ class UserData extends StatefulWidget {
 class _UserDataState extends State<UserData> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: Text('a')));
+    return Scaffold(
+        appBar: AppBar(
+      title: Text('a'),
+      elevation: 0,
+      backgroundColor: Colors.black54,
+    ));
   }
 }

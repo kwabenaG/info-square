@@ -8,6 +8,7 @@ Widget initDrawer() {
   return Drawer(
       child: ListView(padding: EdgeInsets.zero, children: [
     DrawerHeader(
+        padding: EdgeInsets.fromLTRB(30, 60, 30, 10),
         decoration: BoxDecoration(
           color: Colors.blue[700],
         ),
@@ -15,7 +16,7 @@ Widget initDrawer() {
             textAlign: TextAlign.left,
             style: TextStyle(
                 color: Colors.white70,
-                fontSize: 50.0,
+                fontSize: 40.0,
                 fontWeight: FontWeight.w900,
                 fontFamily: 'arial'))),
     ListTile(
@@ -41,16 +42,15 @@ Widget initDrawer() {
                 fontWeight: FontWeight.w700,
                 fontFamily: 'Trajan Pro'))),
     Padding(padding: EdgeInsets.only(bottom: 400)),
-    Divider(height: 0.0),
+    Divider(height: 1.0, color: Colors.black87),
     Container(
-        child: Row(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        Text('v 1.0.0', textAlign: TextAlign.left, style: TextStyle())
-      ],
-    )),
+      margin: EdgeInsets.all(10.0),
+      child: Center(
+          child:
+              Text('v 1.0.0', textAlign: TextAlign.left, style: TextStyle())),
+    ),
   ]));
-}
+} //end of drawer
 
 //homepage news card
 Widget containerListBuilderCardNews() {
@@ -86,15 +86,27 @@ Widget cardNewsWidget() {
                     style:
                         TextStyle(fontSize: 15.0, fontWeight: FontWeight.w500)),
                 subtitle: Text('yeah')),
-            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-              TextButton(
-                child: Text('read more ...',
-                    style: TextStyle(
-                        fontSize: 15.0,
-                        fontWeight: FontWeight.w500,
-                        color: Colors.blue[600])),
-                onPressed: () => {print('read more')},
-              )
-            ])
+            listTileActionsDetails()
           ])));
+}
+
+// for card news => subtls
+
+Widget listTileActionsDetails() {
+  return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+    Icon(
+      Icons.access_time,
+      size: 13.0,
+    ),
+    Padding(padding: EdgeInsets.only(right: 3.0)),
+    Text('6 hrs ago', style: TextStyle(fontSize: 12.0)),
+    TextButton(
+      child: Text('read more ...',
+          style: TextStyle(
+              fontSize: 13.0,
+              fontWeight: FontWeight.w500,
+              color: Colors.blue[600])),
+      onPressed: () => {print('read more')},
+    )
+  ]);
 }
