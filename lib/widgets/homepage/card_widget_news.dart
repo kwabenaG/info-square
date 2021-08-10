@@ -1,10 +1,16 @@
-import "package:flutter/material.dart";
-import 'package:flutter/rendering.dart';
+/// "context" is used as a parameter for major widgets defined
 
 // widget for default page for the card news
 
+import "package:flutter/material.dart";
+import 'package:flutter/rendering.dart';
+
+import 'drawer_menu_items/menu_items.dart';
+
+//  import local folders
+
 // drawers
-Widget initDrawer() {
+Widget initDrawer(context) {
   return Drawer(
       child: ListView(padding: EdgeInsets.zero, children: [
     DrawerHeader(
@@ -21,8 +27,11 @@ Widget initDrawer() {
                 fontFamily: 'arial'))),
     ListTile(
         minVerticalPadding: 20.0,
-        onTap: () {},
-        title: Text("Menu",
+        onTap: () {
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => mandateMethod(context)));
+        },
+        title: Text("Our Mission",
             style: TextStyle(
                 fontSize: 25.0,
                 fontWeight: FontWeight.w700,

@@ -12,7 +12,7 @@ class InfoSquare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(fontFamily: 'Raleway'),
+        theme: ThemeData(iconTheme: IconThemeData(color: Colors.blue[800])),
         debugShowCheckedModeBanner: false,
         title: "Info Dem",
         home: HomeScreen());

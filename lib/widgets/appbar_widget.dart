@@ -5,7 +5,7 @@ import 'package:info_square/screens/pages/user_page.dart';
 
 // local import
 
-// actions user[person icon]
+// actions user[person icon] ==> user
 Widget personButtonAppBar(context) {
   return IconButton(
       icon: Icon(Icons.person, color: Colors.blue[800]),

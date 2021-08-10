@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   //for selected item
-  int _selectedIndex = 0;
+  int _selectedIndexContent = 0;
 
   //responsible for drawer selection
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
@@ -31,14 +31,14 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   void _tapped(int index) {
-    setState(() => {_selectedIndex = index});
+    setState(() => {_selectedIndexContent = index});
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      drawer: initDrawer(),
+      drawer: initDrawer(context),
       drawerScrimColor: Colors.black54,
       drawerEnableOpenDragGesture: false,
       drawerEdgeDragWidth: 5.0,
@@ -70,7 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ]), // end of appbar
       body: Container(
           color: Colors.black12,
-          child: content[_selectedIndex]), //body starts here
+          child: content[_selectedIndexContent]), //body starts here
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(
@@ -90,7 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
             label: "Search",
           ),
         ],
-        currentIndex: _selectedIndex,
+        currentIndex: _selectedIndexContent,
         selectedItemColor: Colors.blue[800],
         unselectedItemColor: Colors.black,
         showUnselectedLabels: true,
