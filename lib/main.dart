@@ -12,9 +12,13 @@ class InfoSquare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(iconTheme: IconThemeData(color: Colors.blue[800])),
+        theme: ThemeData(
+          iconTheme: IconThemeData(color: Colors.blue[800]),
+        ),
         debugShowCheckedModeBanner: false,
         title: "Info Dem",
         home: HomeScreen());
   }
 }
+
+// add riverpod state management plugins to the app

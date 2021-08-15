@@ -4,6 +4,7 @@
 
 import "package:flutter/material.dart";
 import 'package:flutter/rendering.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'drawer_menu_items/menu_items.dart';
 
@@ -20,43 +21,51 @@ Widget initDrawer(context) {
         ),
         child: Text('Info Dem',
             textAlign: TextAlign.left,
-            style: TextStyle(
-                color: Colors.white70,
-                fontSize: 40.0,
-                fontWeight: FontWeight.w900,
-                fontFamily: 'arial'))),
+            style: GoogleFonts.lato(
+              fontSize: 55.0,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+            ))),
     ListTile(
         minVerticalPadding: 20.0,
         onTap: () {
           Navigator.push(context,
               MaterialPageRoute(builder: (context) => mandateMethod(context)));
         },
-        title: Text("Our Mission",
-            style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Trajan Pro'))),
+        title: Text("About Us",
+            style: GoogleFonts.lato(
+              fontSize: 25.0,
+              fontWeight: FontWeight.w700,
+            ))),
     ListTile(
         onTap: () {},
         title: Text("Tools",
-            style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Trajan Pro'))),
+            style: GoogleFonts.lato(
+              fontSize: 25.0,
+              fontWeight: FontWeight.w700,
+            ))),
     ListTile(
         onTap: () {},
         title: Text("Help",
-            style: TextStyle(
-                fontSize: 25.0,
-                fontWeight: FontWeight.w700,
-                fontFamily: 'Trajan Pro'))),
+            style: GoogleFonts.lato(
+              fontSize: 25.0,
+              fontWeight: FontWeight.w700,
+            ))),
     Padding(padding: EdgeInsets.only(bottom: 400)),
     Divider(height: 1.0, color: Colors.black87),
     Container(
       margin: EdgeInsets.all(10.0),
-      child: Center(
-          child:
-              Text('v 1.0.0', textAlign: TextAlign.left, style: TextStyle())),
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text('v 1.0.0',
+                textAlign: TextAlign.center,
+                style: GoogleFonts.lato(
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w700,
+                ))
+          ]),
     ),
   ]));
 } //end of drawer

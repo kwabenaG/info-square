@@ -9,7 +9,9 @@ Widget mandateMethod(context) {
   return Scaffold(
       appBar: AppBar(
           iconTheme: IconThemeData(color: Colors.blue[800]),
-          title: Text("Our Mission", style: TextStyle(color: Colors.blue[800])),
+          title: Text("About Us",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: Colors.blue[800])),
           backgroundColor: Colors.black12,
           elevation: 0),
       body: Container(
