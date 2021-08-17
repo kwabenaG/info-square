@@ -69,6 +69,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: personButtonAppBar(context))
           ]), // end of appbar
       body: Container(
+          // color: Colors.blue,
+          // height: 900.0,
           color: Colors.black12,
           child: content[_selectedIndexContent]), //body starts here
       bottomNavigationBar: BottomNavigationBar(

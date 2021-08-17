@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // import local widgets from widget folder
 import 'package:info_square/widgets/homepage/card_widget_news.dart';
 import 'package:info_square/widgets/homepage/discover/discover.dart';
+import 'package:info_square/widgets/list_news_homepage.dart/list_news.dart';
 
 class DefaultScreen extends StatefulWidget {
   DefaultScreen({Key? key}) : super(key: key);
@@ -14,12 +15,14 @@ class DefaultScreen extends StatefulWidget {
 class _DefaultScreenState extends State<DefaultScreen> {
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
+    return Container(
+        child: Column(children: [
       discover(context),
       containerListBuilderCardNews(),
-      Container(child: Text('a')),
-      Text('add adv here ')
+      listViewInfoDemNews(),
+      // Container(child: Text('a')),
+      // Text('add adv here ')
       //add next column here
-    ]);
+    ]));
   }
 }
