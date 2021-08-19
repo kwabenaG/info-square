@@ -17,7 +17,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
   Widget build(BuildContext context) {
     return Container(
         child: Column(children: [
-      discover(context),
+      // discover(context),
       containerListBuilderCardNews(),
       listViewInfoDemNews(),
       // Container(child: Text('a')),

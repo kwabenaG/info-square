@@ -43,19 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
       drawerEnableOpenDragGesture: false,
       drawerEdgeDragWidth: 5.0,
       appBar: AppBar(
-          //app bar
-          // leading: IconButton(
-          //     visualDensity: VisualDensity.compact,
-          //     icon: Icon(Icons.menu),
-          //     color: Colors.blue[800],
-          //     onPressed: ),
           iconTheme: IconThemeData(color: Colors.blue[800]),
-          // title: Text("Info Dem",
-          //     style: TextStyle(
-          //         fontFamily: "Raleway",
-          //         fontSize: 25.0,
-          //         fontWeight: FontWeight.w600,
-          //         color: Colors.blue[800])),
           elevation: 0,
           backgroundColor: Colors.black12,
           centerTitle: false,
@@ -74,8 +62,10 @@ class _HomeScreenState extends State<HomeScreen> {
           color: Colors.black12,
           child: content[_selectedIndexContent]), //body starts here
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0.0,
         items: [
           BottomNavigationBarItem(
+            backgroundColor: Colors.black12,
             icon: Icon(Icons.home),
             label: "Home",
           ),
@@ -97,7 +87,7 @@ class _HomeScreenState extends State<HomeScreen> {
         unselectedItemColor: Colors.black,
         showUnselectedLabels: true,
         onTap: _tapped,
-        backgroundColor: Colors.blue[800],
+        // backgroundColor: Colors.blue[800],
       ),
     );
   }

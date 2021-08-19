@@ -15,16 +15,24 @@ Widget initDrawer(context) {
   return Drawer(
       elevation: 0.0,
       child: ListView(padding: EdgeInsets.zero, children: [
-        DrawerHeader(
-            margin: EdgeInsets.all(0.0),
-            padding: EdgeInsets.fromLTRB(10, 60, 30, 10),
-            child: Text('Info Dem',
+        // DrawerHeader(
+        //     margin: EdgeInsets.all(0.0),
+        //     padding: EdgeInsets.fromLTRB(10, 60, 30, 10),
+        //     child: Text('Info Dem',
+        //         // textAlign: TextAlign.left,
+        //         style: GoogleFonts.lato(
+        //           fontSize: 55.0,
+        //           fontWeight: FontWeight.w900,
+        //           // color: Colors.black87,
+        //         ))),
+        Padding(padding: EdgeInsets.only(top: 100)),
+        ListTile(
+            title: Text('Info Dem',
                 // textAlign: TextAlign.left,
                 style: GoogleFonts.lato(
-                  fontSize: 55.0,
-                  fontWeight: FontWeight.w900,
-                  // color: Colors.black87,
-                ))),
+                    color: Colors.blue[800],
+                    fontSize: 55.0,
+                    fontWeight: FontWeight.w900))),
         ListTile(
             minVerticalPadding: 20.0,
             onTap: () {
@@ -96,7 +104,8 @@ Widget cardNewsWidget(context) {
       width: MediaQuery.of(context).size.width * 0.6,
       // color: Colors.orange,
       child: Card(
-          elevation: 5.0,
+          elevation: 3.0,
+          color: Colors.white,
           child: Column(children: [
             ListTile(
                 onTap: () {},

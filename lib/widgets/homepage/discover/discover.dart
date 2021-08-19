@@ -5,6 +5,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 // local imports
 // import 'package:info_square/widgets/homepage/discover/discoverPage.dart';
+import 'package:info_square/screens/discoverPages/campusInfo.dart';
 
 Widget discover(context) {
   return Container(
@@ -26,7 +27,7 @@ Widget discover(context) {
                       child: Column(children: [
                         discoverModalTopItems(context), // top row ends here
                         findMoreInfo(),
-                        sheetModalContentOne(),
+                        sheetModalContentOne(context),
                         sheetModalContentTwo(),
                         // add content to the bottom modal sheet  here
                       ]));
@@ -36,13 +37,7 @@ Widget discover(context) {
           },
           child: Text("DISCOVER.",
               style: GoogleFonts.carterOne(
-                  fontSize: 60.0, letterSpacing: 8.0, color: Colors.blue[800])
-              // TextStyle(
-              //     letterSpacing: 7.0,
-              //     color: Colors.blue[800],
-              //     fontSize: 65.0,
-              //     fontWeight: FontWeight.w800)
-              ))
+                  fontSize: 60.0, letterSpacing: 8.0, color: Colors.blue[800])))
     ]),
   );
 }
@@ -79,7 +74,7 @@ Widget findMoreInfo() => Container(
     ]));
 
 // --------------- show  sheet modal content
-Widget sheetModalContentOne() => Container(
+Widget sheetModalContentOne(context) => Container(
     padding: EdgeInsets.all(5.0),
     child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
       Card(
@@ -88,6 +83,12 @@ Widget sheetModalContentOne() => Container(
               height: 50,
               width: 160,
               child: ListTile(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => CampusInfoDiscoverPage()));
+                  },
                   // leading: Icon(Icons.book),
                   title: Text('Campus Info')))),
       Card(
@@ -96,6 +97,7 @@ Widget sheetModalContentOne() => Container(
               height: 50,
               width: 160,
               child: ListTile(
+                  onTap: () {},
                   // leading: Icon(Icons.book),
                   title: Text('Campus Groups')))),
     ]));
@@ -111,6 +113,7 @@ Widget sheetModalContentTwo() => Container(
               height: 50,
               width: 160,
               child: ListTile(
+                  onTap: () {},
                   // leading: Icon(Icons.book),
                   title: Text('Activities')))),
       Card(
@@ -119,6 +122,7 @@ Widget sheetModalContentTwo() => Container(
               height: 50,
               width: 160,
               child: ListTile(
+                  onTap: () {},
                   // leading: Icon(Icons.book),
                   title: Text('Events')))),
     ]));

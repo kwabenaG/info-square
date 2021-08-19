@@ -17,6 +17,9 @@ Widget listViewInfoDemNews() {
               return Container(
                   // padding: EdgeInsets.all(2.0),
                   child: Card(
+                      //card starts here
+                      elevation: 0.0,
+                      color: Colors.white70,
                       margin: EdgeInsets.all(5.0),
                       child: Column(
                           mainAxisAlignment: MainAxisAlignment.start,
