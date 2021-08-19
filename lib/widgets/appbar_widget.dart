@@ -8,7 +8,7 @@ import 'package:info_square/screens/pages/user_page.dart';
 // actions user[person icon] ==> user
 Widget personButtonAppBar(context) {
   return IconButton(
-      icon: Icon(Icons.person, color: Colors.blue[800]),
+      icon: Icon(Icons.settings, color: Colors.blue[900]),
       iconSize: 30.0,
       onPressed: () {
         Navigator.push(

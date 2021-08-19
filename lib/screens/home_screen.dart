@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
     SearchPage()
   ];
 
-  void _tapped(int index) {
+  void _tappedMenu(int index) {
     setState(() => {_selectedIndexContent = index});
   }
 
@@ -74,19 +74,19 @@ class _HomeScreenState extends State<HomeScreen> {
             label: "Events",
           ),
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.speaker),
-            label: "Alerts",
+            icon: Icon(CupertinoIcons.search),
+            label: "Search",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: "Search",
+            icon: Icon(Icons.person),
+            label: "User",
           ),
         ],
         currentIndex: _selectedIndexContent,
         selectedItemColor: Colors.blue[800],
         unselectedItemColor: Colors.black,
         showUnselectedLabels: true,
-        onTap: _tapped,
+        onTap: _tappedMenu,
         // backgroundColor: Colors.blue[800],
       ),
     );
