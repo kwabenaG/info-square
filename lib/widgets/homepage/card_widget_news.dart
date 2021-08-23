@@ -4,6 +4,7 @@
 
 import "package:flutter/material.dart";
 import 'package:flutter/rendering.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'drawer_menu_items/menu_items.dart';
@@ -79,68 +80,107 @@ Widget initDrawer(context) {
       ]));
 } //end of drawer
 
-//homepage news card
-Widget containerListBuilderCardNews() {
-  return Container(
-      height: 150,
-      width: 500,
-      // color: Colors.amberAccent,
-      // padding: EdgeInsets.all(10.0),
-      child: ListView.builder(
-          shrinkWrap: true,
-          scrollDirection: Axis.horizontal,
-          itemCount: 4,
-          itemBuilder: (BuildContext context, int index) {
-            return cardNewsWidget(context);
-          }));
-}
+// scroll menu top navigation
 
-// methods to homepage news card
-Widget cardNewsWidget(context) {
-  return Container(
-      margin: EdgeInsets.all(3.0),
-      padding: EdgeInsets.all(1.0),
-      // height: MediaQuery.of(context).size.width * 0.2,
-      width: MediaQuery.of(context).size.width * 0.6,
-      // color: Colors.orange,
-      child: Card(
-          elevation: 3.0,
-          color: Colors.white,
-          child: Column(children: [
-            ListTile(
-                onTap: () {},
-                // leading: Icon(Icons.new_releases,
-                //     size: 30.0, color: Colors.blue[600]),
-                title: Text(
-                    'Knust builds new science complex Knust builds new science complex ...',
-                    overflow: TextOverflow.ellipsis,
-                    // maxLines: 10,
+Widget trendingMenuList() {
+  return DefaultTabController(
+      length: 10,
+      child: TabBar(
+          isScrollable: true,
+          indicatorColor: Colors.transparent,
+          unselectedLabelColor: Colors.white,
+          tabs: [
+            Tab(
+                child: Text('Trending',
                     style: GoogleFonts.lato(
-                        fontSize: 15.0, fontWeight: FontWeight.w500)),
-                subtitle: Text('campus news',
-                    style: GoogleFonts.lato(
-                        fontSize: 15.0, fontWeight: FontWeight.w500))),
-            listTileActionsDetails()
-          ])));
+                        fontSize: 16.0,
+                        color: Colors.blue[800],
+                        decoration: TextDecoration.none))),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a'),
+            Tab(text: 'a')
+          ]));
 }
 
-// for card news => subtls
 
-Widget listTileActionsDetails() {
-  return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-    Icon(
-      Icons.access_time,
-      size: 13.0,
-    ),
-    Padding(padding: EdgeInsets.only(right: 3.0)),
-    Text('6 hrs ago', style: TextStyle(fontSize: 12.0)),
-    TextButton(
-      child: Text('read more ...',
-          style: TextStyle(
-              fontSize: 13.0,
-              fontWeight: FontWeight.w500,
-              color: Colors.blue[600])),
-      onPressed: () => {print('read more')},
-    )
-  ]);
-}
+
+
+
+
+
+
+
+
+// ------------------------------
+// //homepage news card
+// Widget containerListBuilderCardNews() {
+//   return Container(
+//       height: 40,
+//       width: 200,
+//       // color: Colors.amberAccent,
+//       // padding: EdgeInsets.all(10.0),
+//       child: ListView.builder(
+//           shrinkWrap: true,
+//           scrollDirection: Axis.horizontal,
+//           itemCount: 6,
+//           itemBuilder: (BuildContext context, int index) {
+//             return Row(children: [
+//               TextButton(onPressed: (){}, child: Text('a'))
+              
+//               ]);
+//           }));
+// }
+
+// // methods to homepage news card
+// Widget cardNewsWidget(context) {
+//   return Container(
+//       // margin: EdgeInsets.all(3.0),
+//       padding: EdgeInsets.all(1.0),
+//       height: MediaQuery.of(context).size.height * 0.2,
+//       width: MediaQuery.of(context).size.width * 0.6,
+//       // color: Colors.orange,
+//       child: Card(
+//           // elevation: 3.0,
+//           color: Colors.white,
+//           child: Column(children: [
+//             ListTile(
+//                 onTap: () {},
+//                 // leading: Icon(Icons.new_releases,
+//                 //     size: 30.0, color: Colors.blue[600]),
+//                 title: Text('a',
+//                     // maxLines: 10,
+//                     style: GoogleFonts.lato(
+//                         fontSize: 15.0, fontWeight: FontWeight.w500)),
+//                 subtitle: Text('campus news',
+//                     style: GoogleFonts.lato(
+//                         fontSize: 15.0, fontWeight: FontWeight.w500))),
+//             // listTileActionsDetails()
+//           ])));
+// }
+
+// // for card news => subtls
+
+// Widget listTileActionsDetails() {
+//   return Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+//     Icon(
+//       Icons.access_time,
+//       size: 13.0,
+//     ),
+//     Padding(padding: EdgeInsets.only(right: 3.0)),
+//     Text('6 hrs ago', style: TextStyle(fontSize: 12.0)),
+//     TextButton(
+//       child: Text('read more ...',
+//           style: TextStyle(
+//               fontSize: 13.0,
+//               fontWeight: FontWeight.w500,
+//               color: Colors.blue[600])),
+//       onPressed: () => {print('read more')},
+//     )
+//   ]);
+// }

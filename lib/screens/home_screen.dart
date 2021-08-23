@@ -1,6 +1,7 @@
 import "dart:core";
 import 'package:flutter/cupertino.dart';
 import "package:flutter/material.dart";
+import 'package:flutter/widgets.dart';
 
 // local imports
 import 'package:info_square/screens/pages/default_page.dart';
@@ -50,11 +51,13 @@ class _HomeScreenState extends State<HomeScreen> {
           actions: [
             Container(
                 margin: EdgeInsets.all(6.0),
+                // padding: EdgeInsets.all(6.0),
                 decoration: BoxDecoration(
+                  // borderRadius: BorderRadius.all(Radius.zero),
                   color: Colors.grey[400],
                   shape: BoxShape.circle,
                 ),
-                child: personButtonAppBar(context))
+                child: settingsButtonAppBar(context))
           ]), // end of appbar
       body: Container(
           // color: Colors.blue,
@@ -73,10 +76,10 @@ class _HomeScreenState extends State<HomeScreen> {
             icon: Icon(Icons.calendar_view_day_outlined),
             label: "Events",
           ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.search),
-            label: "Search",
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(CupertinoIcons.search),
+          //   label: "Search",
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "User",
