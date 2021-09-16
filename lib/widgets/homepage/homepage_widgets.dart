@@ -16,16 +16,6 @@ Widget initDrawer(context) {
   return Drawer(
       elevation: 0.0,
       child: ListView(padding: EdgeInsets.zero, children: [
-        // DrawerHeader(
-        //     margin: EdgeInsets.all(0.0),
-        //     padding: EdgeInsets.fromLTRB(10, 60, 30, 10),
-        //     child: Text('Info Dem',
-        //         // textAlign: TextAlign.left,
-        //         style: GoogleFonts.lato(
-        //           fontSize: 55.0,
-        //           fontWeight: FontWeight.w900,
-        //           // color: Colors.black87,
-        //         ))),
         Padding(padding: EdgeInsets.only(top: 100)),
         ListTile(
             title: Text('Info Dem',
@@ -82,40 +72,29 @@ Widget initDrawer(context) {
 
 // scroll menu top navigation
 
-Widget trendingMenuList() {
-  return DefaultTabController(
-      length: 10,
-      child: TabBar(
-          isScrollable: true,
-          indicatorColor: Colors.transparent,
-          unselectedLabelColor: Colors.white,
-          tabs: [
-            Tab(
-                child: Text('Trending',
-                    style: GoogleFonts.lato(
-                        fontSize: 16.0,
-                        color: Colors.blue[800],
-                        decoration: TextDecoration.none))),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a'),
-            Tab(text: 'a')
-          ]));
+Widget trendingMenuCarousel() {
+  return Container(
+      height: 50,
+      // width: MediaQuery.of(context).size.width * 10,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text('Trending'),
+                  Text('Latest'),
+                  Text('Filla'),
+                  Text('Hall Weeks'),
+                  Text('Music'),
+                  Text('Entertainment')
+                ]),
+          )
+        ],
+      ));
 }
-
-
-
-
-
-
-
-
-
 
 // ------------------------------
 // //homepage news card
@@ -132,7 +111,7 @@ Widget trendingMenuList() {
 //           itemBuilder: (BuildContext context, int index) {
 //             return Row(children: [
 //               TextButton(onPressed: (){}, child: Text('a'))
-              
+
 //               ]);
 //           }));
 // }

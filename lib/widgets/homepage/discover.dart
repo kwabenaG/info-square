@@ -10,15 +10,11 @@ import 'package:info_square/screens/discoverPages/campusInfo.dart';
 Widget discover(context) {
   return Container(
     height: 90.0,
-    // padding: EdgeInsets.only(top: 10.0),
-    // margin: EdgeInsets.all(0.0),
     child:
         ListView(scrollDirection: Axis.horizontal, shrinkWrap: true, children: [
       TextButton(
           onPressed: () {
             showModalBottomSheet(
-                //modal bottom sheet section
-                // isScrollControlled: true,
                 isDismissible: false,
                 context: context,
                 builder: (BuildContext context) {
@@ -29,7 +25,6 @@ Widget discover(context) {
                         findMoreInfo(),
                         sheetModalContentOne(context),
                         sheetModalContentTwo(),
-                        // add content to the bottom modal sheet  here
                       ]));
                 });
             // Navigator.push(context,
