@@ -12,14 +12,17 @@ class InfoSquare extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(
-          primaryColor: Colors.blue[800],
-          accentColor: Colors.white70,
-          iconTheme: IconThemeData(color: Colors.blue[800]),
-        ),
-        debugShowCheckedModeBanner: false,
-        title: "Info Dem",
-        home: HomeScreen());
+      theme: ThemeData(
+        primaryColor: Colors.blue[800],
+        colorScheme:
+            ColorScheme.fromSwatch().copyWith(secondary: Colors.white70),
+        iconTheme: IconThemeData(color: Colors.blue[800]),
+      ),
+      debugShowCheckedModeBanner: false,
+      title: "Info Dem",
+      home: HomeScreen(),
+      // darkTheme: ,
+    );
   }
 }
 // add slider to home page 

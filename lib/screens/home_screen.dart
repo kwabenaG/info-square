@@ -9,7 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 // local imports
 import 'package:info_square/screens/pages/page_default.dart';
 import 'package:info_square/screens/pages/page_event.dart';
-import 'package:info_square/screens/pages/page_search.dart';
+// import 'package:info_square/screens/pages/page_search.dart';
 import 'package:info_square/widgets/appbar_widget.dart';
 // import 'package:info_square/widgets/custom_app_bar.dart';
 // import 'package:info_square/widgets/appbar_widget.dart';
@@ -31,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
   //responsible for drawer selection
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
 
-  // content classes
+  // main pages
   final List<Widget> content = [
     DefaultScreen(),
     Event(),
@@ -39,6 +39,7 @@ class _HomeScreenState extends State<HomeScreen> {
     // SearchPage()
   ];
 
+  //function to index the bottom menu
   void _tappedMenu(int index) {
     setState(() => {_selectedIndexContent = index});
   }

@@ -3,6 +3,8 @@
 // ------- fields needed for the news class
 // title, image, description, tags, uploadDate
 
+import "dart:core";
+// import "dart:convert";
 import 'package:info_square/models/club.dart';
 // import 'package:meta/meta.dart';
 

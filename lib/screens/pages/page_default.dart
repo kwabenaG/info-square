@@ -1,3 +1,4 @@
+// handles the default screen
 import 'package:flutter/material.dart';
 
 // import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -60,6 +61,7 @@ class _DefaultScreenState extends State<DefaultScreen> {
       // trendingMenuCarousel(context),
       // SizedBox(height: 5.0),
       Container(
+        // top news label item
         height: 50,
         child: ListView(
           scrollDirection: Axis.horizontal,

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+// import 'package:info_square/models/models.dart';
 import 'package:info_square/screens/pages/page_reaction/comment.dart';
 
 // mock data
@@ -32,7 +33,7 @@ class _ListViewInfoDemNewsState extends State<ListViewInfoDemNews> {
               child: ListView.builder(
                   // for larger chuck of data
                   physics: BouncingScrollPhysics(),
-                  itemCount: userReady.length,
+                  itemCount: readyNews.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Container(
                         margin: EdgeInsets.only(
@@ -60,7 +61,8 @@ class _ListViewInfoDemNewsState extends State<ListViewInfoDemNews> {
                                       child: CircleAvatar(
                                         backgroundColor: Colors.grey,
                                         backgroundImage: NetworkImage(
-                                          'https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=a2f8c40e39b8dfee1534eb32acfa6bc7',
+                                          'https://source.unsplash.com/user/random/200x200',
+                                          // 'https://images.unsplash.com/profile-1446404465118-3a53b909cc82?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32&s=a2f8c40e39b8dfee1534eb32acfa6bc7',
                                         ),
                                       ),
                                     ),
@@ -75,12 +77,16 @@ class _ListViewInfoDemNewsState extends State<ListViewInfoDemNews> {
                                         Row(
                                           children: [
                                             // ClubName(),
-                                            Text('Name'),
+                                            Text(readyNews[index]
+                                                .clubOwner[0]
+                                                .clubAdmin[0]
+                                                .adminFirstName),
                                             Icon(Icons.verified_sharp,
                                                 size: 15),
                                           ],
                                         ),
-                                        Text('4hr ago',
+                                        Text(
+                                            '${readyNews[index].uploadDate}ago',
                                             style:
                                                 GoogleFonts.lato(fontSize: 12))
                                       ],
@@ -111,6 +117,16 @@ class _ListViewInfoDemNewsState extends State<ListViewInfoDemNews> {
                                       )
                                     ])
                               ]),
+                          Row(children: [
+                            Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 5, vertical: 20)),
+                            Flexible(
+                                child: Text(readyNews[index].title,
+                                    style: GoogleFonts.lato(
+                                        fontWeight: FontWeight.w600,
+                                        fontSize: 15)))
+                          ]),
                           // Image(image:),
                           // title , images goes here
                           Row(

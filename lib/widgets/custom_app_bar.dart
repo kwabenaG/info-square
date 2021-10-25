@@ -1,20 +1,5 @@
 // handles app bar
 
-// AppBar(
-//             iconTheme: IconThemeData(color: Colors.blue[800]),
-//             elevation: 0,
-//             backgroundColor: Colors.black12,
-//             centerTitle: false,
-//             actions: [
-//               Container(
-//                   margin: EdgeInsets.all(6.0),
-//                   decoration: BoxDecoration(
-//                     color: Colors.grey[400],
-//                     shape: BoxShape.circle,
-//                   ),
-//                   child: settingsButtonAppBar(context))
-//             ])
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
